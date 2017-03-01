@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Game_Controller : MonoBehaviour {
-
+    [Header("Players Score")]
     public int Player1Score = 0;
     public int Player2Score = 0;
 	

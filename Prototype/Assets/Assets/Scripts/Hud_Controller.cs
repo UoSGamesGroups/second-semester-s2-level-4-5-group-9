@@ -13,10 +13,10 @@ public class Hud_Controller : MonoBehaviour {
 		
 	}
 	
-	/*
+	/*                                                      TODO
 	void Update () {
         player1Text.text = (GameObject.Find("Game_Controller").GetComponent<GameController>().Player1Score);
-        player2Text.text = (GameObject.Find("Game_Controller").GetComponent<GameController>().Player2Score);
+        player2Text.text = (GameObject.Find("Game_Controller").GetComponent<GameController>().Player2Score); 
     }
     */
 }

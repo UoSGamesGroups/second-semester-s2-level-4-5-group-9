@@ -7,59 +7,31 @@ Direct3D:
     VRAM:     3072 MB
     Driver:   21.21.13.7653
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.105 seconds
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Matt\Downloads\second-semester-s2-level-4-5-group-9-master\Prototype\Builds\Build_17_03_01_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.103 seconds
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 30Hz; virtual: 9600x2381 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.916572 ms
-ArgumentException: The Object you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.IceShatterFX () [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'Ball2') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1754)
 
-ArgumentException: The Object you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.IceShatterFX () [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour (Game Object 'Ball') is missing!
  
-(Filename:  Line: -1)
+(Filename:  Line: 1754)
 
-ArgumentException: The Object you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.IceShatterFX () [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-ArgumentException: The Object you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.IceShatterFX () [0x00000] in <filename unknown>:0 
-  at Ice_FX_Controller.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+UnloadTime: 0.994734 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2e30 -> priority: 1 
+  Thread -> id: c2c -> priority: 1 

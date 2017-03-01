@@ -57,13 +57,21 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("RightWall"))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2 (GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y);
+            AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         }
 
         if (Coll.gameObject.tag == ("LeftWall"))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y);
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
         }
-
+        if (Coll.gameObject.tag == ("SideWall"))
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+        }
         if (Coll.gameObject.tag == ("LeftGoal"))
         {
             GCScript.Player2Score++;

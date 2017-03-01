@@ -17,13 +17,14 @@ Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-g
 Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.104 seconds
+- Completed reload, in  0.023 seconds
 Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Matt\Documents\GitHub\second-semester-s2-level-4-5-group-9\Prototype\Builds\Build_17_03_01_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 30Hz; virtual: 9600x2381 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+UnloadTime: 0.895495 ms
 The referenced script on this Behaviour (Game Object 'Ball2') is missing!
  
 (Filename:  Line: 1754)
@@ -32,16 +33,81 @@ The referenced script on this Behaviour (Game Object 'Ball') is missing!
  
 (Filename:  Line: 1754)
 
-UnloadTime: 0.930624 ms
-The referenced script on this Behaviour (Game Object 'Ball') is missing!
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.122974 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 319.
+Total: 0.155738 ms (FindLiveObjects: 0.027517 ms CreateObjectMapping: 0.012002 ms MarkObjects: 0.108314 ms  DeleteObjects: 0.006147 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
  
-(Filename:  Line: 1754)
+(Filename:  Line: -1)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.194098 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 458.
-Total: 0.231558 ms (FindLiveObjects: 0.030152 ms CreateObjectMapping: 0.012295 ms MarkObjects: 0.181499 ms  DeleteObjects: 0.002927 ms)
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Ball_Controller.OnCollisionEnter2D (UnityEngine.Collision2D Coll) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2858 -> priority: 1 
+  Thread -> id: 2a74 -> priority: 1 

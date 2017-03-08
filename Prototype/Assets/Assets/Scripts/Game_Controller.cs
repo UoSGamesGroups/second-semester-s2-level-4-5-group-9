@@ -13,6 +13,10 @@ public class Game_Controller : MonoBehaviour {
     public Text Player2ScoreTxt;
     // Stores Winning player text
     public Text WinningPlayer;
+    // Timer varibles
+    public Text MatchTimerTxt;
+    [SerializeField]
+    private float timer = 0f;
 
     void Start()
     {
@@ -32,11 +36,16 @@ public class Game_Controller : MonoBehaviour {
             print("Player2 Wins");
             WinningPlayer.text = "Player Two Wins!";
         }
-	}
+        // Updates timer, sorts into mins and secs, updates 'MatchTimerTxt'
+        timer += Time.deltaTime;
+        int minutes = (int)timer / 60;
+        int seconds = (int)timer % 60;
+        MatchTimerTxt.text =  minutes.ToString() + " : " + seconds.ToString("00");
+    }
     // Updates score, called from 'Ball_Controller' on goal
     public void UpdateScoreBoard()
     {
-        Player1ScoreTxt.text = "Player One: " + Player1Score.ToString();
-        Player2ScoreTxt.text = "Player Two: " + Player2Score.ToString();
+        Player1ScoreTxt.text =  Player1Score.ToString();
+        Player2ScoreTxt.text =  Player2Score.ToString();
     }
 }

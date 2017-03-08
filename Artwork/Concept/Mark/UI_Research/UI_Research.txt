@@ -12,3 +12,18 @@ https://www.youtube.com/watch?v=zp4NZ8i80QI
 
 Hearthstone: How to Create an Immersive User Interface:
 https://www.youtube.com/watch?v=axkPXCNjOh8
+
+Stylized Ice Texture:
+https://share.allegorithmic.com/libraries/679
+
+Tuts:
+
+The new UI:
+https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/the-new-ui?playlist=17111
+
+Polishing Your Game Menu:
+https://unity3d.com/learn/tutorials/topics/user-interface-ui/polishing-your-game-menu?playlist=17111
+
+Using the UI Tools:
+https://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/using-the-ui-tools?playlist=17111
+

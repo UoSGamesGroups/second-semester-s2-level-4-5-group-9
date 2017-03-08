@@ -1,0 +1,14 @@
+Anthony Stonehouse's User interface design in video games:
+http://www.gamasutra.com/blogs/AnthonyStonehouse/20140227/211823/User_interface_design_in_video_games.php
+
+Alan Bradley's 6 examples of UI design that every game developer should study:
+http://www.gamasutra.com/view/news/289637/6_examples_of_UI_design_that_every_game_developer_should_study.php
+
+Desi Quintans' Game UI By Example: A Crash Course in the Good and the Bad:
+https://gamedevelopment.tutsplus.com/tutorials/game-ui-by-example-a-crash-course-in-the-good-and-the-bad--gamedev-3943
+
+Destiny's Tenacious Design and Interface:
+https://www.youtube.com/watch?v=zp4NZ8i80QI
+
+Hearthstone: How to Create an Immersive User Interface:
+https://www.youtube.com/watch?v=axkPXCNjOh8

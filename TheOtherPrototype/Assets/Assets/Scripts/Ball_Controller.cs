@@ -73,14 +73,14 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("LeftGoal"))
         {
             GCScript.Player2Score++;
-			GCScript.UpdateScoreBoard();
+            GCScript.UpdateScoreBoard();
             StartCoroutine (Reset());
         }
 
         if (Coll.gameObject.tag == ("RightGoal"))
         {
             GCScript.Player1Score++;
-			GCScript.UpdateScoreBoard();
+            GCScript.UpdateScoreBoard();
             StartCoroutine (Reset());
         }
     }

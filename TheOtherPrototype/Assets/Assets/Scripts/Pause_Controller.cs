@@ -35,6 +35,11 @@ public class Pause_Controller : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);         // Reloads the current scene
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;       // Toggles time & Stops Update Functions
     }
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);       // Loads MainMenu
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;       // Toggles time & Stops Update Functions
+    }
     public void Quit()
     {
 #if UNITY_EDITOR

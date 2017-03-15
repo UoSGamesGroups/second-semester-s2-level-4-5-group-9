@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class Menu_Controller : MonoBehaviour {
 
@@ -22,6 +25,10 @@ public class Menu_Controller : MonoBehaviour {
 
     public void QuitGame()
     {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;                // If used in editor it ends play mode
+#else                                                       // Otherwise it'll quit the application
         Application.Quit();
+#endif
     }
 }

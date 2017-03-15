@@ -10,6 +10,8 @@ public class Ball_Controller : MonoBehaviour
 
     public float LaunchForce;
 
+    private int PlayerScored = 0;
+
     private GameObject GameController;
     private Game_Controller GCScript;
 
@@ -65,7 +67,19 @@ public class Ball_Controller : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         transform.position = new Vector2(0, 0);
         yield return new WaitForSeconds(1);
-        Launch();
+        if (PlayerScored == 1)
+        {
+            Vector2 LaunchDirection = new Vector2 (Random.Range(0.1f, 0.99f), Random.Range(0.1f, 0.99f));
+            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
+            PlayerScored = 0;
+        }
+
+        if (PlayerScored == 2)
+        {
+            Vector2 LaunchDirection = new Vector2(Random.Range(-0.1f, -0.99f), Random.Range(-0.1f, -0.99f));
+            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
+            PlayerScored = 0;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D Coll)
@@ -73,6 +87,7 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("LeftGoal"))
         {
             GCScript.Player2Score++;
+            PlayerScored = 2;
             GCScript.UpdateScoreBoard();
             StartCoroutine (Reset());
         }
@@ -80,6 +95,7 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("RightGoal"))
         {
             GCScript.Player1Score++;
+            PlayerScored = 1;
             GCScript.UpdateScoreBoard();
             StartCoroutine (Reset());
         }

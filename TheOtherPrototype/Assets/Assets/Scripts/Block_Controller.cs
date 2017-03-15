@@ -6,9 +6,9 @@ public class Block_Controller : MonoBehaviour {
 
     bool BlockCD = true;
     private int Cooldown = 10;
-    public PolygonCollider2D BlockCollider;
+    public BoxCollider2D BlockCollider;
     public bool BlockActivated = false;
-    private int Visable = 5;
+    private int Visable = 1;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
 
@@ -37,7 +37,7 @@ public class Block_Controller : MonoBehaviour {
                 }
                 break;
             case 2:
-                if ((BlockCD) && (Input.GetKeyDown(KeyCode.R)))
+                if ((BlockCD) && (Input.GetKeyDown(KeyCode.P)))
                 {
                     StartCoroutine(BlockActive());
                 }

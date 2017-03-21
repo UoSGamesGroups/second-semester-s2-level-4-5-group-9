@@ -16,7 +16,7 @@ public class Ball_Controller : MonoBehaviour
     private GameObject GameController;
     private Game_Controller GCScript;
     // Varibles for camera jolt
-    private GameObject CamController;
+    private GameObject CamControllerObj;
     private CameraController CCScript;
 
     private Rigidbody2D rb;
@@ -36,8 +36,8 @@ public class Ball_Controller : MonoBehaviour
         GameController = GameObject.Find("Game_Controller");
         GCScript = GameController.GetComponent<Game_Controller>();
         // Gets/sets compononents for camera jolt
-        CamController = GameObject.Find("Main Camera");
-        CCScript = CamController.GetComponent<CameraController>();
+        CamControllerObj = GameObject.Find("Main Camera");
+        CCScript = CamControllerObj.GetComponent<CameraController>();
 
         Launch();
     }
@@ -95,6 +95,7 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("LeftGoal"))
         {
             CCScript.CameraJoltLeft();      // Triggers camera jolt 
+            GCScript.PlayerTwoScored();     // Triggers Player Two scored Animation
             GCScript.Player2Score++;
             PlayerScored = 2;
             GCScript.UpdateScoreBoard();    // Updates score UI
@@ -104,6 +105,7 @@ public class Ball_Controller : MonoBehaviour
         if (Coll.gameObject.tag == ("RightGoal"))
         {
             CCScript.CameraJoltRight();     // Trigger camera jolt
+            GCScript.PlayerOneScored();     // Triggers Player One scored Animation
             GCScript.Player1Score++;
             PlayerScored = 1;
             GCScript.UpdateScoreBoard();    // Updates score UI

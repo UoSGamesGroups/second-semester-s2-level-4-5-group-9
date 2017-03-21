@@ -16,9 +16,13 @@ public class Game_Controller : MonoBehaviour {
     // Timer varibles
     public Text MatchTimerTxt;
     [SerializeField]
-    private float timer = 0f;
-	
-	    void Start()
+    private float timer = 180f;
+
+    // Animators for the PlayerScored Canvas Images
+    public Animator PlayerOneScoreAnim;
+    public Animator PlayerTwoScoreAnim;
+
+    void Start()
     {
         UpdateScoreBoard();
     }
@@ -34,8 +38,12 @@ public class Game_Controller : MonoBehaviour {
         {
             print("Player2 Wins");
         }
+        if (Input.GetKeyUp("b"))
+            {
+                PlayerTwoScored();
+            }
         // Updates timer, sorts into mins and secs, updates 'MatchTimerTxt'
-        timer += Time.deltaTime;
+        timer -= Time.deltaTime;
         int minutes = (int)timer / 60;
         int seconds = (int)timer % 60;
         MatchTimerTxt.text =  minutes.ToString() + " : " + seconds.ToString("00");		
@@ -45,5 +53,14 @@ public class Game_Controller : MonoBehaviour {
     {
         Player1ScoreTxt.text =  Player1Score.ToString();
         Player2ScoreTxt.text =  Player2Score.ToString();
+    }
+
+    public void PlayerOneScored()
+    {
+        PlayerOneScoreAnim.Play("PlayerOneScoredAnim");
+    }
+    public void PlayerTwoScored()
+    {
+        PlayerTwoScoreAnim.Play("PlayerTwoScoredAnim");
     }
 }

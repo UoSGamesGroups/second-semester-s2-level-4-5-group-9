@@ -29,10 +29,25 @@ public class Player_Controller : MonoBehaviour
     private ThrowDirection ThrowDir = ThrowDirection.Straight;
     private bool BallCaught = false;
     private GameObject HeldBall;
+    
+    [Header("Player Selection")]
+    private GameObject Game_Controller;
+    private ValueStorer GameC_Script;
 
+    public Sprite Penguin;
+    public Sprite PolarBear;
+    public Sprite Reindeer;
+    public Sprite Wolf;
+
+    public SpriteRenderer ThisSprite;
+
+    // Use this for initialization
     void Start()
     {
+        Game_Controller = GameObject.Find("GameController");
+        GameC_Script = Game_Controller.GetComponent<ValueStorer>();
 
+        ThisSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -97,6 +112,53 @@ public class Player_Controller : MonoBehaviour
             if (Input.GetKeyDown(CatchKey))
             {
                 StartCoroutine(Timer());
+            }
+        }
+        
+        //Reindeer 1.6
+        //Polarbear 1.2
+
+        if (Player == 1)
+        {
+            switch (GameC_Script.Player1Character)
+            {
+                case 0:
+                    ThisSprite.sprite = Penguin;
+                    transform.localScale = new Vector3(0.8f, 0.8f, 0);
+                    break;
+                case 1:
+                    ThisSprite.sprite = PolarBear;
+                    transform.localScale = new Vector3(1.2f, 1.2f, 0);
+                    break;
+                case 2:
+                    ThisSprite.sprite = Reindeer;
+                    transform.localScale = new Vector3(1.6f, 1.6f, 0);
+                    break;
+                case 3:
+                    ThisSprite.sprite = Wolf;
+                    break;
+            }
+        }
+
+        if (Player == 2)
+        {
+            switch (GameC_Script.Player2Character)
+            {
+                case 0:
+                    ThisSprite.sprite = Penguin;
+                    transform.localScale = new Vector3(0.8f, 0.8f, 0);
+                    break;
+                case 1:
+                    ThisSprite.sprite = PolarBear;
+                    transform.localScale = new Vector3(1.2f, 1.2f, 0);
+                    break;
+                case 2:
+                    ThisSprite.sprite = Reindeer;
+                    transform.localScale = new Vector3(1.6f, 1.6f, 0);
+                    break;
+                case 3:
+                    ThisSprite.sprite = Wolf;
+                    break;
             }
         }
     }

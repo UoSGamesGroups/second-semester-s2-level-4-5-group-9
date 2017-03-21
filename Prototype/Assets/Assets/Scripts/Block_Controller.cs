@@ -6,9 +6,10 @@ public class Block_Controller : MonoBehaviour {
 
     bool BlockCD = true;
     private int Cooldown = 10;
-    public BoxCollider2D BlockCollider;
+    //public PolygonCollider2D BlockCollider;
     public bool BlockActivated = false;
     private int Visable = 1;
+    public GameObject BlockAsset;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
 
@@ -16,7 +17,8 @@ public class Block_Controller : MonoBehaviour {
     {
         Player_Controller = this.gameObject;
         Player_Script = Player_Controller.GetComponent<Player_Controller>();
-        BlockCollider.enabled = false;
+        //BlockCollider.enabled = false;
+        BlockAsset.SetActive(false);
 	}
 
 
@@ -64,13 +66,13 @@ public class Block_Controller : MonoBehaviour {
 
     IEnumerator BlockActive ()
     {
-        BlockCollider.enabled = true;
+        //BlockCollider.enabled = true;
+        BlockAsset.SetActive(true);
         BlockActivated = true;
-        //Play Animation
-        //Instantiate the image
         yield return new WaitForSeconds(Visable);
         BlockActivated = false;
-        BlockCollider.enabled = false;
+        //BlockCollider.enabled = false;
+        BlockAsset.SetActive(false);
         BlockCD = false;
     }
 }

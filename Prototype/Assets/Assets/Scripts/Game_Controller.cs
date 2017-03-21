@@ -7,8 +7,8 @@ public class Game_Controller : MonoBehaviour {
 	[Header("Player's Scores")]
     public int Player1Score = 0;
     public int Player2Score = 0;
-	
-	// Stores players scores as strings
+
+    // Stores players scores as strings
     public Text Player1ScoreTxt;
     public Text Player2ScoreTxt;
     // Timer varibles
@@ -48,8 +48,8 @@ public class Game_Controller : MonoBehaviour {
         timer -= Time.deltaTime;
         int minutes = (int)timer / 60;
         int seconds = (int)timer % 60;
-        MatchTimerTxt.text =  minutes.ToString() + " : " + seconds.ToString("00");		
-	}
+        MatchTimerTxt.text =  minutes.ToString() + " : " + seconds.ToString("00");	
+    }
 	    // Updates score, called from 'Ball_Controller' on goal
     public void UpdateScoreBoard()
     {

@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 631d555be9ff778429c422fa0534f7d9
-timeCreated: 1490082107
+timeCreated: 1490092403
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: playerOneScoredText
     21300002: playerTwoScoredText
+    21300004: playerOneWinsText
+    21300006: playerTwoWinsText
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -92,6 +94,32 @@ TextureImporter:
         y: 579
         width: 776
         height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playerOneWinsText
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 484
+        width: 668
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playerTwoWinsText
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 392
+        width: 690
+        height: 73
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

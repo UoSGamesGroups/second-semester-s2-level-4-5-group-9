@@ -8,11 +8,9 @@ public class Game_Controller : MonoBehaviour {
     public int Player1Score = 0;
     public int Player2Score = 0;
 	
-	// Stores player score as a string
+	// Stores players scores as strings
     public Text Player1ScoreTxt;
     public Text Player2ScoreTxt;
-    // Stores Winning player text
-    //public Text WinningPlayer;
     // Timer varibles
     public Text MatchTimerTxt;
     [SerializeField]
@@ -29,19 +27,23 @@ public class Game_Controller : MonoBehaviour {
 	
 	void Update ()
     {
-		if (Player1Score == 5)
+		if (timer <= 0)
         {
-            print("Player1 Wins");
+            if (Player1Score == Player2Score)
+            {
+                print("Draw");
+            }
+            if (Player1Score > Player2Score)
+            {
+                print("Player One Wins!");
+            }
+            if (Player1Score < Player2Score)
+            {
+                print("Player Two Wins");
+            }
         }
         
-        if (Player2Score == 5)
-        {
-            print("Player2 Wins");
-        }
-        if (Input.GetKeyUp("b"))
-            {
-                PlayerTwoScored();
-            }
+
         // Updates timer, sorts into mins and secs, updates 'MatchTimerTxt'
         timer -= Time.deltaTime;
         int minutes = (int)timer / 60;

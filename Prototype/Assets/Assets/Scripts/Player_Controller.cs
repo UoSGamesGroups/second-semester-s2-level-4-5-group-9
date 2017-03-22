@@ -114,9 +114,6 @@ public class Player_Controller : MonoBehaviour
                 StartCoroutine(Timer());
             }
         }
-        
-        //Reindeer 1.6
-        //Polarbear 1.2
 
         if (Player == 1)
         {
@@ -124,15 +121,21 @@ public class Player_Controller : MonoBehaviour
             {
                 case 0:
                     ThisSprite.sprite = Penguin;
-                    transform.localScale = new Vector3(0.8f, 0.8f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 1:
                     ThisSprite.sprite = PolarBear;
-                    transform.localScale = new Vector3(1.2f, 1.2f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 2:
                     ThisSprite.sprite = Reindeer;
-                    transform.localScale = new Vector3(1.6f, 1.6f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(1.5f, 1.5f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;
@@ -146,15 +149,21 @@ public class Player_Controller : MonoBehaviour
             {
                 case 0:
                     ThisSprite.sprite = Penguin;
-                    transform.localScale = new Vector3(0.8f, 0.8f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 1:
                     ThisSprite.sprite = PolarBear;
-                    transform.localScale = new Vector3(1.2f, 1.2f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 2:
                     ThisSprite.sprite = Reindeer;
-                    transform.localScale = new Vector3(1.6f, 1.6f, 0);
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(1.5f, 1.5f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;

@@ -6,9 +6,8 @@ public class Block_Controller : MonoBehaviour {
 
     bool BlockCD = true;
     private int Cooldown = 10;
-    //public PolygonCollider2D BlockCollider;
     public bool BlockActivated = false;
-    private int Visable = 1;
+    private float Visable = 0.3f;
     public GameObject BlockAsset;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
@@ -17,7 +16,6 @@ public class Block_Controller : MonoBehaviour {
     {
         Player_Controller = this.gameObject;
         Player_Script = Player_Controller.GetComponent<Player_Controller>();
-        //BlockCollider.enabled = false;
         BlockAsset.SetActive(false);
 	}
 

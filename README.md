@@ -1,7 +1,11 @@
-# Group Project
+# Group Project L4_5, Group 9, Second Semester
 
-This is the repository for your group project, keep it neat and well organised with sensible folder structures.
+**Team Members:**
 
-There is **no** need to create archived builds of your project or to keep any old files - everything is automatically archived for you.
+**Programmer Level 5 - Charlie Crewe**
 
-**Note** that these repositories are visible to anyone, so it is your chance to publically demonstrate your ability to work in a professional and considered manner.
+**Designer Level 5 - Jamie Chandler**
+
+**Designer Level 4 - Mark Key**
+
+**Designer Level 4 - Thomas Turner**

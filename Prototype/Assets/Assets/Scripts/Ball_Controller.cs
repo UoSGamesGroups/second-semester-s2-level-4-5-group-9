@@ -23,7 +23,7 @@ public class Ball_Controller : MonoBehaviour
 
     void Start()
     {
-        if ( Balls == null )
+        if (Balls == null)
         {
             Balls = new List<GameObject>();
         }
@@ -44,7 +44,7 @@ public class Ball_Controller : MonoBehaviour
 
     void Update()
     {
-    
+
     }
 
     public void Throw(int player, int throwCharge, Vector2 pos, Player_Controller.ThrowDirection ThrowDir)
@@ -77,7 +77,7 @@ public class Ball_Controller : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (PlayerScored == 1)
         {
-            Vector2 LaunchDirection = new Vector2 (Random.Range(0.1f, 0.99f), Random.Range(0.1f, 0.99f));
+            Vector2 LaunchDirection = new Vector2(Random.Range(0.1f, 0.99f), Random.Range(0.1f, 0.99f));
             rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
             PlayerScored = 0;
         }
@@ -99,7 +99,7 @@ public class Ball_Controller : MonoBehaviour
             GCScript.Player2Score++;
             PlayerScored = 2;
             GCScript.UpdateScoreBoard();    // Updates score UI
-            StartCoroutine (Reset());
+            StartCoroutine(Reset());
         }
 
         if (Coll.gameObject.tag == ("RightGoal"))
@@ -109,7 +109,19 @@ public class Ball_Controller : MonoBehaviour
             GCScript.Player1Score++;
             PlayerScored = 1;
             GCScript.UpdateScoreBoard();    // Updates score UI
-            StartCoroutine (Reset());
+            StartCoroutine(Reset());
+        }
+
+        // Gets an IceSmash Object from the IceSmashPooler
+        if (Coll.gameObject.tag == ("Wall"))
+        {
+            GameObject obj = IceSmashPooler.current.GetPooledObject();
+
+            if (obj == null) return;
+
+            obj.transform.position = transform.position;
+            obj.transform.rotation = transform.rotation;
+            obj.SetActive(true);
         }
     }
 }

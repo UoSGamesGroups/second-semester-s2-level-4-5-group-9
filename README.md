@@ -20,6 +20,8 @@
         <td>
             <img alt="ScreenShot02" src="Captures/ScreenShots/ScreenShot02.png">
         </td>
+    </tr>
+    <tr>
         <td>
             <img alt="ScreenShot03" src="Captures/ScreenShots/ScreenShot03.png">
         </td>

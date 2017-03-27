@@ -11,23 +11,25 @@ public class Game_Controller : MonoBehaviour {
     // Stores players scores as strings
     public Text Player1ScoreTxt;
     public Text Player2ScoreTxt;
-    // Timer varibles
+    // Stores time remaining as a string
     public Text MatchTimerTxt;
-    [SerializeField]
-    private float timer = 180f;
+    [Space(5), Tooltip("Length of match in seconds")]
+    public float timer = 180f;
 
     // Animators for the PlayerScored Canvas Images
     public Animator PlayerOneScoreAnim;
     public Animator PlayerTwoScoreAnim;
+    [SerializeField]
+    private bool gameFinished = false;
 
-    void Start()
+    void Awake()
     {
         UpdateScoreBoard();
     }
 	
 	void Update ()
     {
-		if (timer <= 0)
+		if ((timer <= 0) && (!gameFinished))
         {
             if (Player1Score == Player2Score)
             {
@@ -41,14 +43,18 @@ public class Game_Controller : MonoBehaviour {
             {
                 print("Player Two Wins");
             }
+            gameFinished = true;
         }
-        
+
 
         // Updates timer, sorts into mins and secs, updates 'MatchTimerTxt'
-        timer -= Time.deltaTime;
-        int minutes = (int)timer / 60;
-        int seconds = (int)timer % 60;
-        MatchTimerTxt.text =  minutes.ToString() + " : " + seconds.ToString("00");	
+        if (!gameFinished)
+        {
+            timer -= Time.deltaTime;
+            int minutes = (int)timer / 60;
+            int seconds = (int)timer % 60;
+            MatchTimerTxt.text = minutes.ToString() + " : " + seconds.ToString("00");
+        }
     }
 	    // Updates score, called from 'Ball_Controller' on goal
     public void UpdateScoreBoard()

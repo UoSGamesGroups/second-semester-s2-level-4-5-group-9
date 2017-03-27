@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class IceSmashScript : MonoBehaviour {
 
-    // Time until Object is disabled after being pulled from the object pool
-    public float IceSmashLenth;
+    [Space(5), Tooltip("Time until Object is disabled, after being pulled from the object pool")]
+    public float IceSmashLength;
 
     void OnEnable()
     {
-        Invoke("Destroy", IceSmashLenth);
+        Invoke("Destroy", IceSmashLength);
     }
 
     void Destroy()

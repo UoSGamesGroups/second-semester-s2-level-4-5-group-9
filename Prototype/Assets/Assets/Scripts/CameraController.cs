@@ -16,7 +16,6 @@ public class CameraController : MonoBehaviour {
     [Space(5), Tooltip("Amount of time to wait before reset/returing camera to center")]
     public float resetWaitTime = 0.2f;
 
-
     private Vector3 desiredPos;     // Stores position to jolt to
     private Vector3 centerPos;      // Stores return/reset position
 
@@ -25,29 +24,29 @@ public class CameraController : MonoBehaviour {
         // Sets reset pposition
         centerPos = transform.position;
     }
-    
+
     public void CameraJoltLeft()
     {
-        offCenterDir = -offCenterAmount;
-        StartCoroutine(CamJolt());
+            offCenterDir = -offCenterAmount;
+            StartCoroutine(CamJolt());
     }
 
     public void CameraJoltRight()
     {
-        offCenterDir = offCenterAmount;
-        StartCoroutine(CamJolt());
+            offCenterDir = offCenterAmount;
+            StartCoroutine(CamJolt());
     }
 
-        IEnumerator CamJolt()
-    {
-        desiredPos = transform.position + new Vector3(offCenterDir, 0, 0);
-        while (Vector3.Distance(transform.position, desiredPos) > 0.05f)
+    IEnumerator CamJolt()
         {
-            transform.position = smoothOn ? Vector3.Lerp(transform.position, desiredPos, joltSmoothAmount) : desiredPos;
+            desiredPos = transform.position + new Vector3(offCenterDir, 0, 0);
+            while (Vector3.Distance(transform.position, desiredPos) > 0.05f)
+            {
+                transform.position = smoothOn ? Vector3.Lerp(transform.position, desiredPos, joltSmoothAmount) : desiredPos;
+            }
 
-            yield return null;
-        }
             yield return new WaitForSeconds(resetWaitTime);
+
             while (Vector3.Distance(transform.position, centerPos) > 0.05f)
             {
                 transform.position = smoothOn ? Vector3.Lerp(transform.position, centerPos, resetSmoothAmount) : centerPos;

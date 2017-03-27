@@ -33,7 +33,7 @@ public class Pause_Controller : MonoBehaviour {
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);         // Reloads the current scene
-        Time.timeScale = Time.timeScale == 0 ? 1 : 0;       // Toggles time & Stops Update Functions
+        Time.timeScale = 1;       // Sets time back to running normally
     }
     public void LoadMainMenu()
     {

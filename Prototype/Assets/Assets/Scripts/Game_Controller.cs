@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Game_Controller : MonoBehaviour {
-	[Header("Player's Scores")]
+	[Header("Players' Scores")]
     public int Player1Score = 0;
     public int Player2Score = 0;
 
@@ -22,6 +22,13 @@ public class Game_Controller : MonoBehaviour {
     [SerializeField]
     private bool gameFinished = false;
 
+    public GameObject playerOneWinsText;
+    public GameObject playerTwoWinsText;
+
+    public GameObject EndOfMatchCanvas;
+
+    private int PlayerWhoWon;
+
     void Awake()
     {
         UpdateScoreBoard();
@@ -34,16 +41,22 @@ public class Game_Controller : MonoBehaviour {
             if (Player1Score == Player2Score)
             {
                 print("Draw");
+                PlayerWhoWon = 0;
             }
             if (Player1Score > Player2Score)
             {
-                print("Player One Wins!");
+                PlayerWhoWon = 1;
+//                print("Player One Wins!");
+//               playerOneWinsText.SetActive(true);
             }
             if (Player1Score < Player2Score)
             {
-                print("Player Two Wins");
+                PlayerWhoWon = 2;
+//                print("Player Two Wins");
+//                playerTwoWinsText.SetActive(true);
             }
             gameFinished = true;
+            EndOfMatch();
         }
 
 
@@ -70,5 +83,24 @@ public class Game_Controller : MonoBehaviour {
     public void PlayerTwoScored()
     {
         PlayerTwoScoreAnim.Play("PlayerTwoScoredAnim");
+    }
+
+    void EndOfMatch()
+    {
+        switch (PlayerWhoWon)
+        {
+            case 0:
+                break;
+            case 1:
+                print("Player One Wins!");
+                playerOneWinsText.SetActive(true);
+                EndOfMatchCanvas.SetActive(true);
+                break;
+            case 2:
+                print("Player Two Wins");
+                playerTwoWinsText.SetActive(true);
+                EndOfMatchCanvas.SetActive(true);
+                break;
+        }
     }
 }

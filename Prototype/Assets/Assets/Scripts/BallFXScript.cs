@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class BallFXScript : MonoBehaviour{
     
-    public AudioClip iceSmashSound;
-
     private AudioSource source;
 
-    [Header("Picks random Volume between these ranges")]
-    [Tooltip("Adjusts lowest Pitch")]
-    public float pitchLowRange = .5f;
-    [Tooltip("Adjusts highest Pitch")]
-    public float pitchHighRange = 1.0f;
-    
+    public AudioClip iceSmashSound;
+    public AudioClip splashSound;
 
-    [Space(5),Tooltip("How loud the sound is, relative to velocity")]
+    [Header("Ice Smash SFX")]
+    [Header("Picks random Pitch between these ranges")]
+    [Tooltip("Adjusts lowest Pitch")]
+    public float icePitchLowRange = .5f;
+    [Tooltip("Adjusts highest Pitch")]
+    public float icePitchHighRange = 1.0f;
+    [Space(5), Tooltip("How loud the sound is, relative to velocity")]
     public float velocityToVol = .2F;
+
+    [Header("Splash SFX")]
+    [Header("Picks random Pitch between these ranges")]
+    [Tooltip("Adjusts lowest Pitch")]
+    public float splashPitchLowRange = .9f;
+    [Tooltip("Adjusts highest Pitch")]
+    public float splashPitchHighRange = 1.2f;
+
 
     void Awake()
     {
@@ -30,7 +38,7 @@ public class BallFXScript : MonoBehaviour{
         if (Coll.gameObject.tag == ("Wall"))
         {
             // Triggers soundFx
-            source.pitch = Random.Range(pitchLowRange, pitchHighRange);
+            source.pitch = Random.Range(icePitchLowRange, icePitchHighRange);
             float hitVol = Coll.relativeVelocity.magnitude * velocityToVol;
             source.PlayOneShot(iceSmashSound, hitVol);
 
@@ -41,5 +49,21 @@ public class BallFXScript : MonoBehaviour{
             obj.transform.rotation = transform.rotation;
             obj.SetActive(true);
         }
+        if (Coll.gameObject.tag == ("LeftGoal"))
+        {
+            GoalSFX();
+        }
+
+        if (Coll.gameObject.tag == ("RightGoal"))
+        {
+            GoalSFX();
+        }
+
+    }
+
+    void GoalSFX()
+    {
+        source.pitch = Random.Range(splashPitchLowRange, splashPitchHighRange);
+        source.PlayOneShot(splashSound, 1f);
     }
 }

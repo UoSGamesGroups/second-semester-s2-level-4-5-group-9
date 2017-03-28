@@ -4,33 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Game_Controller : MonoBehaviour {
+
 	[Header("Players' Scores")]
     public int Player1Score = 0;
     public int Player2Score = 0;
 
-    // Stores players scores as strings
+    [Header("Stores players scores as strings")]
     public Text Player1ScoreTxt;
     public Text Player2ScoreTxt;
-    // Stores time remaining as a string
+
+    [Header("Stores time remaining as a string")]
     public Text MatchTimerTxt;
-    [Space(5), Tooltip("Length of match in seconds")]
+
+    [Header("Length of match in seconds")]
     public float timer = 180f;
 
-    // Animators for the PlayerScored Canvas Images
+    [Header("Animators for the PlayerScored Canvas Images")]
     public Animator PlayerOneScoreAnim;
     public Animator PlayerTwoScoreAnim;
-    [SerializeField]
-    private bool gameFinished = false;
+
+    private bool gameFinished = false;      // To stop match timer from running
     private bool isSuddenDeath = false;
 
-    // End of match game objects
+    [Header("End of match game objects")]
     public GameObject playerOneWinsText;
     public GameObject playerTwoWinsText;
     public GameObject playerDrawText;
     public GameObject suddenDeathImage;
     public GameObject timerText;
 
-    public GameObject EndOfMatchCanvas;
+    public GameObject endOfMatchCanvas;
+    public Animator EndOfMatchAnim;         // To fade screen at the end of the match
 
     private int PlayerWhoWon;
 
@@ -41,7 +45,7 @@ public class Game_Controller : MonoBehaviour {
 	
 	void Update ()
     {
-		if ((timer <= 0) && (!gameFinished))
+        if ((timer <= 0) && (!gameFinished))
         {
             if (Player1Score == Player2Score)
             {
@@ -108,13 +112,15 @@ public class Game_Controller : MonoBehaviour {
                 break;
             case 1:
                 playerOneWinsText.SetActive(true);
-                EndOfMatchCanvas.SetActive(true);
+                endOfMatchCanvas.SetActive(true);
                 print("Player One Wins!");
+                EndOfMatchAnim.Play("EndOfMatchPanelAnim");
                 break;
             case 2:
                 playerTwoWinsText.SetActive(true);
-                EndOfMatchCanvas.SetActive(true);
+                endOfMatchCanvas.SetActive(true);
                 print("Player Two Wins");
+                EndOfMatchAnim.Play("EndOfMatchPanelAnim");
                 break;
         }
     }

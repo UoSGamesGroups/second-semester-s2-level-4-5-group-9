@@ -111,17 +111,5 @@ public class Ball_Controller : MonoBehaviour
             GCScript.UpdateScoreBoard();    // Updates score UI
             StartCoroutine(Reset());
         }
-
-        // Gets an IceSmash Object from the IceSmashPooler
-        if (Coll.gameObject.tag == ("Wall"))
-        {
-            GameObject obj = IceSmashPooler.current.GetPooledObject();
-
-            if (obj == null) return;
-
-            obj.transform.position = transform.position;
-            obj.transform.rotation = transform.rotation;
-            obj.SetActive(true);
-        }
     }
 }

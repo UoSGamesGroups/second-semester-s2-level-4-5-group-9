@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour {
 
     void Start()
     {
-        // Sets reset pposition
+        // Sets reset position
         centerPos = transform.position;
     }
 

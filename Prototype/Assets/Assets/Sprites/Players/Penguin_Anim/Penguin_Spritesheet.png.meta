@@ -1,0 +1,426 @@
+fileFormatVersion: 2
+guid: 9203c76e04b72684d80bd522a1a43fcc
+timeCreated: 1490743804
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Penguin_Spritesheet_0
+    21300002: Penguin_Spritesheet_1
+    21300004: Penguin_Spritesheet_2
+    21300006: Penguin_Spritesheet_3
+    21300008: Penguin_Spritesheet_4
+    21300010: Penguin_Spritesheet_20
+    21300012: Penguin_Spritesheet_5
+    21300014: Penguin_Spritesheet_6
+    21300016: Penguin_Spritesheet_7
+    21300018: Penguin_Spritesheet_8
+    21300020: Penguin_Spritesheet_9
+    21300022: Penguin_Spritesheet_21
+    21300024: Penguin_Spritesheet_10
+    21300026: Penguin_Spritesheet_11
+    21300028: Penguin_Spritesheet_12
+    21300030: Penguin_Spritesheet_13
+    21300032: Penguin_Spritesheet_14
+    21300034: Penguin_Spritesheet_22
+    21300036: Penguin_Spritesheet_15
+    21300038: Penguin_Spritesheet_16
+    21300040: Penguin_Spritesheet_17
+    21300042: Penguin_Spritesheet_18
+    21300044: Penguin_Spritesheet_19
+    21300046: Penguin_Spritesheet_23
+    21300048: Penguin_Spritesheet_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1569
+        width: 307
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1569
+        width: 307
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1569
+        width: 305
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1569
+        width: 303
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1569
+        width: 299
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1569
+        width: 297
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1177
+        width: 294
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1177
+        width: 289
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1177
+        width: 283
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1177
+        width: 277
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1177
+        width: 269
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 1177
+        width: 302
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 785
+        width: 294
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 785
+        width: 307
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 785
+        width: 303
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 785
+        width: 284
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 785
+        width: 255
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 785
+        width: 305
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 393
+        width: 264
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 393
+        width: 272
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 393
+        width: 279
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 393
+        width: 286
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 393
+        width: 292
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 393
+        width: 307
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Penguin_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 307
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

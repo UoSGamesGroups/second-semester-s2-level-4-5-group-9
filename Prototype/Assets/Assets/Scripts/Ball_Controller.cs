@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball_Controller : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class Ball_Controller : MonoBehaviour
     private GameObject CamControllerObj;
     private CameraController CCScript;
 
+    public Text ResumeText;
+    public GameObject resumetext;
+    private float ResumeTimer = 4;
+    private int ResumeGame = 0;
     private Rigidbody2D rb;
 
     void Start()
@@ -27,6 +32,8 @@ public class Ball_Controller : MonoBehaviour
         {
             Balls = new List<GameObject>();
         }
+
+        resumetext.SetActive(false);
 
         Balls.Add(gameObject);
 
@@ -44,7 +51,22 @@ public class Ball_Controller : MonoBehaviour
 
     void Update()
     {
-
+        if (ResumeGame == 1)
+        {
+            ResumeTimer -= Time.deltaTime;
+            int seconds = (int)ResumeTimer % 60;
+            ResumeText.text = seconds.ToString("00");
+            if (ResumeTimer <= 0)
+            {
+                ResumeGame = 2;
+            }
+        }
+        else if (ResumeGame == 2)
+        {
+            resumetext.SetActive(false);
+            StartBall();
+            ResumeGame = 0;
+        }
     }
 
     public void Throw(int player, int throwCharge, Vector2 pos, Player_Controller.ThrowDirection ThrowDir)
@@ -72,22 +94,12 @@ public class Ball_Controller : MonoBehaviour
 
     IEnumerator Reset()
     {
+
         rb.velocity = new Vector2(0, 0);
         transform.position = new Vector2(0, 0);
         yield return new WaitForSeconds(1);
-        if (PlayerScored == 1)
-        {
-            Vector2 LaunchDirection = new Vector2(Random.Range(0.1f, 0.99f), Random.Range(0.1f, 0.99f));
-            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
-            PlayerScored = 0;
-        }
-
-        if (PlayerScored == 2)
-        {
-            Vector2 LaunchDirection = new Vector2(Random.Range(-0.1f, -0.99f), Random.Range(-0.1f, -0.99f));
-            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
-            PlayerScored = 0;
-        }
+        ResumeGame = 1;
+        resumetext.SetActive(true);
     }
 
     void OnCollisionEnter2D(Collision2D Coll)
@@ -110,6 +122,23 @@ public class Ball_Controller : MonoBehaviour
             PlayerScored = 1;
             GCScript.UpdateScoreBoard();    // Updates score UI
             StartCoroutine(Reset());
+        }
+    }
+
+    void StartBall()
+    {
+        if (PlayerScored == 1)
+        {
+            Vector2 LaunchDirection = new Vector2(Random.Range(0.1f, 0.99f), Random.Range(0.1f, 0.99f));
+            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
+            PlayerScored = 0;
+        }
+
+        if (PlayerScored == 2)
+        {
+            Vector2 LaunchDirection = new Vector2(Random.Range(-0.1f, -0.99f), Random.Range(-0.1f, -0.99f));
+            rb.AddForce(LaunchDirection * LaunchForce, ForceMode2D.Impulse);
+            PlayerScored = 0;
         }
     }
 }

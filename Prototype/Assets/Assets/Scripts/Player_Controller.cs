@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class Player_Controller : MonoBehaviour
         Down
     }
 
-    private int ThrowCharge = 0;
+    public int ThrowCharge = 0;
     private ThrowDirection ThrowDir = ThrowDirection.Straight;
     private bool BallCaught = false;
     private GameObject HeldBall;
@@ -41,11 +42,15 @@ public class Player_Controller : MonoBehaviour
 
     public SpriteRenderer ThisSprite;
 
+    public Slider PlayerPowerBar;
+
     // Use this for initialization
     void Start()
     {
         Game_Controller = GameObject.Find("GameController");
         GameC_Script = Game_Controller.GetComponent<ValueStorer>();
+
+        PlayerPowerBar.value = ThrowCharge;
 
         ThisSprite = GetComponent<SpriteRenderer>();
     }
@@ -78,20 +83,7 @@ public class Player_Controller : MonoBehaviour
         else
             MoveY = 0;
 
-        if (BallCaught)
-        {
-            if (Input.GetKeyDown(UpKey))
-            {
-                ThrowDir = ThrowDirection.Up;
-            }
-
-            if (Input.GetKeyDown(DownKey))
-            {
-                ThrowDir = ThrowDirection.Down;
-            } 
-        }
-
-		if ((Input.GetKeyUp(UpKey)) || (Input.GetKeyUp(DownKey)))
+        if ((Input.GetKeyUp(UpKey)) || (Input.GetKeyUp(DownKey)))
 		{
             ThrowDir = ThrowDirection.Straight;
 		}
@@ -100,18 +92,26 @@ public class Player_Controller : MonoBehaviour
 
         if (BallCaught)
         {
+            PlayerPowerBar.value = ThrowCharge;
+
             if (Input.GetKeyUp(CatchKey))
             {
                 HeldBall.SetActive(true);
-                HeldBall.GetComponent<Ball_Controller>().Throw(Player, ThrowCharge, transform.position, ThrowDir);
+                HeldBall.GetComponent<Ball_Controller>().Throw(Player, ThrowCharge - 1, transform.position, ThrowDir);
                 HeldBall = null;
                 BallCaught = false;
+                PlayerPowerBar.value = 0;
                 ThrowCharge = 0;
             }
 
-            if (Input.GetKeyDown(CatchKey))
+            if (Input.GetKeyDown(UpKey))
             {
-                StartCoroutine(Timer());
+                ThrowDir = ThrowDirection.Up;
+            }
+
+            if (Input.GetKeyDown(DownKey))
+            {
+                ThrowDir = ThrowDirection.Down;
             }
         }
 
@@ -135,10 +135,13 @@ public class Player_Controller : MonoBehaviour
                     ThisSprite.sprite = Reindeer;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
-                    transform.localScale = new Vector3(1.5f, 1.5f, 0);
+                    transform.localScale = new Vector3(0.6f, 0.6f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
             }
         }
@@ -163,10 +166,13 @@ public class Player_Controller : MonoBehaviour
                     ThisSprite.sprite = Reindeer;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
-                    transform.localScale = new Vector3(1.5f, 1.5f, 0);
+                    transform.localScale = new Vector3(0.6f, 0.6f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;
+                    Destroy(GetComponent<PolygonCollider2D>());
+                    gameObject.AddComponent<PolygonCollider2D>();
+                    transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
             }
         }
@@ -179,8 +185,8 @@ public class Player_Controller : MonoBehaviour
             if (Vector3.Distance(transform.position, Ball.transform.position) < 2.0f && Input.GetKeyDown(CatchKey))
             {
                 BallCaught = true;
-                StartCoroutine (Timer());
                 HeldBall = Ball;
+                StartCoroutine(Timer());
                 HeldBall.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 HeldBall.SetActive(false);
             }
@@ -190,10 +196,14 @@ public class Player_Controller : MonoBehaviour
     IEnumerator Timer()
     {
         ThrowCharge++;
+        yield return new WaitForSeconds(0.5f);
+        ThrowCharge++;
+        yield return new WaitForSeconds(0.5f);
+        ThrowCharge++;
+        yield return new WaitForSeconds(0.5f);
+        ThrowCharge++;
 
         if (ThrowCharge > 4)
             ThrowCharge = 4;
-
-        yield return new WaitForSeconds(0.25f);
     }
 }

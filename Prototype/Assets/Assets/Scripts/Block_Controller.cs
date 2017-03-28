@@ -8,6 +8,7 @@ public class Block_Controller : MonoBehaviour {
     private int Cooldown = 10;
     public bool BlockActivated = false;
     private float Visable = 0.3f;
+    private bool CanBlock = true;
     public GameObject BlockAsset;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
@@ -27,9 +28,10 @@ public class Block_Controller : MonoBehaviour {
             case 0:
                 break;
             case 1:
-                if ((BlockCD) && (Input.GetKeyDown(KeyCode.R)))
+                if (BlockCD && (Input.GetKeyDown(KeyCode.R)) && CanBlock)
                 {
                     StartCoroutine(BlockActive());
+                    CanBlock = false;
                 }
                 else if (!BlockCD)
                 {
@@ -37,9 +39,10 @@ public class Block_Controller : MonoBehaviour {
                 }
                 break;
             case 2:
-                if ((BlockCD) && (Input.GetKeyDown(KeyCode.P)))
+                if ((BlockCD) && (Input.GetKeyDown(KeyCode.P)) && CanBlock)
                 {
                     StartCoroutine(BlockActive());
+                    CanBlock = false;
                 }
                 else if (!BlockCD)
                 {
@@ -58,18 +61,16 @@ public class Block_Controller : MonoBehaviour {
             tempTimer -= 1;
             yield return new WaitForSeconds(1);
         }
-
+        CanBlock = true;
         BlockCD = true;
     }
 
     IEnumerator BlockActive ()
     {
-        //BlockCollider.enabled = true;
         BlockAsset.SetActive(true);
         BlockActivated = true;
         yield return new WaitForSeconds(Visable);
         BlockActivated = false;
-        //BlockCollider.enabled = false;
         BlockAsset.SetActive(false);
         BlockCD = false;
     }

@@ -22,8 +22,10 @@ public class Game_Controller : MonoBehaviour {
     [SerializeField]
     private bool gameFinished = false;
 
+    // End of match game objects
     public GameObject playerOneWinsText;
     public GameObject playerTwoWinsText;
+    public GameObject playerDrawText;
 
     public GameObject EndOfMatchCanvas;
 
@@ -40,20 +42,15 @@ public class Game_Controller : MonoBehaviour {
         {
             if (Player1Score == Player2Score)
             {
-                print("Draw");
                 PlayerWhoWon = 0;
             }
             if (Player1Score > Player2Score)
             {
                 PlayerWhoWon = 1;
-//                print("Player One Wins!");
-//               playerOneWinsText.SetActive(true);
             }
             if (Player1Score < Player2Score)
             {
                 PlayerWhoWon = 2;
-//                print("Player Two Wins");
-//                playerTwoWinsText.SetActive(true);
             }
             gameFinished = true;
             EndOfMatch();
@@ -90,16 +87,18 @@ public class Game_Controller : MonoBehaviour {
         switch (PlayerWhoWon)
         {
             case 0:
+                playerDrawText.SetActive(true);
+                print("Draw");
                 break;
             case 1:
-                print("Player One Wins!");
                 playerOneWinsText.SetActive(true);
                 EndOfMatchCanvas.SetActive(true);
+                print("Player One Wins!");
                 break;
             case 2:
-                print("Player Two Wins");
                 playerTwoWinsText.SetActive(true);
                 EndOfMatchCanvas.SetActive(true);
+                print("Player Two Wins");
                 break;
         }
     }

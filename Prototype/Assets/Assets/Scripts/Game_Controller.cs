@@ -92,7 +92,7 @@ public class Game_Controller : MonoBehaviour {
 
         if (isSuddenDeath)
         {
-            PlayerWhoWon = 1;
+            PlayerWhoWon = 2;
             EndOfMatch();
         }
     }

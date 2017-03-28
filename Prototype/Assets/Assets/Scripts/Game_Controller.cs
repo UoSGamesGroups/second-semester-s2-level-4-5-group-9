@@ -21,11 +21,14 @@ public class Game_Controller : MonoBehaviour {
     public Animator PlayerTwoScoreAnim;
     [SerializeField]
     private bool gameFinished = false;
+    private bool isSuddenDeath = false;
 
     // End of match game objects
     public GameObject playerOneWinsText;
     public GameObject playerTwoWinsText;
     public GameObject playerDrawText;
+    public GameObject suddenDeathImage;
+    public GameObject timerText;
 
     public GameObject EndOfMatchCanvas;
 
@@ -56,7 +59,6 @@ public class Game_Controller : MonoBehaviour {
             EndOfMatch();
         }
 
-
         // Updates timer, sorts into mins and secs, updates 'MatchTimerTxt'
         if (!gameFinished)
         {
@@ -76,10 +78,23 @@ public class Game_Controller : MonoBehaviour {
     public void PlayerOneScored()
     {
         PlayerOneScoreAnim.Play("PlayerOneScoredAnim");
+
+        if (isSuddenDeath)
+        {
+            PlayerWhoWon = 1;
+            EndOfMatch();
+        }
     }
+
     public void PlayerTwoScored()
     {
         PlayerTwoScoreAnim.Play("PlayerTwoScoredAnim");
+
+        if (isSuddenDeath)
+        {
+            PlayerWhoWon = 1;
+            EndOfMatch();
+        }
     }
 
     void EndOfMatch()
@@ -89,6 +104,7 @@ public class Game_Controller : MonoBehaviour {
             case 0:
                 playerDrawText.SetActive(true);
                 print("Draw");
+                StartCoroutine(SuddenDeath());
                 break;
             case 1:
                 playerOneWinsText.SetActive(true);
@@ -101,5 +117,17 @@ public class Game_Controller : MonoBehaviour {
                 print("Player Two Wins");
                 break;
         }
+    }
+
+    IEnumerator SuddenDeath()
+    {
+        yield return new WaitForSeconds(1f);
+        playerDrawText.SetActive(false);
+        timerText.SetActive(false);
+        suddenDeathImage.SetActive(true);
+        Player1Score = 0;
+        Player2Score = 0;
+        UpdateScoreBoard();
+        isSuddenDeath = true;
     }
 }

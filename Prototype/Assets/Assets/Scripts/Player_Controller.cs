@@ -62,7 +62,6 @@ public class Player_Controller : MonoBehaviour
             foreach (GameObject Ball in Ball_Controller.Balls)
             {
                 BallDistance(Ball);
-
                 // can only catch one ball at a time.
                 if (HeldBall != null)
                     break;
@@ -100,8 +99,6 @@ public class Player_Controller : MonoBehaviour
                 HeldBall.GetComponent<Ball_Controller>().Throw(Player, ThrowCharge - 1, transform.position, ThrowDir);
                 HeldBall = null;
                 BallCaught = false;
-                PlayerPowerBar.value = 0;
-                ThrowCharge = 0;
             }
 
             if (Input.GetKeyDown(UpKey))
@@ -113,6 +110,12 @@ public class Player_Controller : MonoBehaviour
             {
                 ThrowDir = ThrowDirection.Down;
             }
+        }
+
+        if (!BallCaught)
+        {
+            ThrowCharge = 0;
+            PlayerPowerBar.value = 0;
         }
 
         if (Player == 1)
@@ -195,15 +198,10 @@ public class Player_Controller : MonoBehaviour
 
     IEnumerator Timer()
     {
-        ThrowCharge++;
-        yield return new WaitForSeconds(0.5f);
-        ThrowCharge++;
-        yield return new WaitForSeconds(0.5f);
-        ThrowCharge++;
-        yield return new WaitForSeconds(0.5f);
-        ThrowCharge++;
-
-        if (ThrowCharge > 4)
-            ThrowCharge = 4;
+        while (ThrowCharge < 4)
+        {
+            ThrowCharge++;
+            yield return new WaitForSeconds(0.45f);
+        }
     }
 }

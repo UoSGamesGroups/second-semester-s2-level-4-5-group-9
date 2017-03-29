@@ -8,6 +8,7 @@ public class BallFXScript : MonoBehaviour{
 
     public AudioClip iceSmashSound;
     public AudioClip splashSound;
+    public AudioClip iceScrapeSound;
 
     [Header("Ice Smash SFX")]
     [Header("Picks random Pitch between these ranges")]
@@ -24,6 +25,18 @@ public class BallFXScript : MonoBehaviour{
     public float splashPitchLowRange = .9f;
     [Tooltip("Adjusts highest Pitch")]
     public float splashPitchHighRange = 1.2f;
+
+
+    //------------ Not triggering TODO ----------------------//
+
+    [Header("Ice Scrape SFX")]
+    [Header("Picks random Pitch between these ranges")]
+    [Tooltip("Adjusts lowest Pitch")]
+    public float iceScrapeLowRange = .5f;
+    [Tooltip("Adjusts highest Pitch")]
+    public float iceScrapeHighRange = 1.0f;
+    [Space(5), Tooltip("How loud the sound is, relative to velocity")]
+    public float scrapeVelocityToVol = .2F;
 
 
     void Awake()
@@ -59,6 +72,12 @@ public class BallFXScript : MonoBehaviour{
             GoalSFX();
         }
 
+        if (Coll.gameObject.tag == ("CenterLine"))
+        {
+            source.pitch = Random.Range(iceScrapeLowRange, iceScrapeHighRange);
+            float hitVol = Coll.relativeVelocity.magnitude * scrapeVelocityToVol;
+            source.PlayOneShot(iceScrapeSound, hitVol);
+        }
     }
 
     void GoalSFX()

@@ -38,19 +38,19 @@ public class CameraController : MonoBehaviour {
     }
 
     IEnumerator CamJolt()
+    {
+        desiredPos = transform.position + new Vector3(offCenterDir, 0, 0);
+        while (Vector3.Distance(transform.position, desiredPos) > 0.05f)
         {
-            desiredPos = transform.position + new Vector3(offCenterDir, 0, 0);
-            while (Vector3.Distance(transform.position, desiredPos) > 0.05f)
-            {
-                transform.position = smoothOn ? Vector3.Lerp(transform.position, desiredPos, joltSmoothAmount) : desiredPos;
-            }
+            transform.position = smoothOn ? Vector3.Lerp(transform.position, desiredPos, joltSmoothAmount) : desiredPos;
+        }
 
-            yield return new WaitForSeconds(resetWaitTime);
+        yield return new WaitForSeconds(resetWaitTime);
 
-            while (Vector3.Distance(transform.position, centerPos) > 0.05f)
-            {
-                transform.position = smoothOn ? Vector3.Lerp(transform.position, centerPos, resetSmoothAmount) : centerPos;
-                yield return null;
-            }
+        while (Vector3.Distance(transform.position, centerPos) > 0.05f)
+        {
+            transform.position = smoothOn ? Vector3.Lerp(transform.position, centerPos, resetSmoothAmount) : centerPos;
+            yield return null;
+        }
     }
 }

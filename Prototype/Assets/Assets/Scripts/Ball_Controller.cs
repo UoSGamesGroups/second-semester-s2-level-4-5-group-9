@@ -26,6 +26,9 @@ public class Ball_Controller : MonoBehaviour
     private int ResumeGame = 0;
     private Rigidbody2D rb;
 
+    // bool is changed by Game_Controller Script
+    public bool _scoringEnabled;
+
     void Start()
     {
         if (Balls == null)
@@ -45,6 +48,8 @@ public class Ball_Controller : MonoBehaviour
         // Gets/sets compononents for camera jolt
         CamControllerObj = GameObject.Find("Main Camera");
         CCScript = CamControllerObj.GetComponent<CameraController>();
+        // Makes sure _scoringEnabled is set true on start 
+        _scoringEnabled = true;
 
         Launch();
     }
@@ -104,7 +109,7 @@ public class Ball_Controller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D Coll)
     {
-        if (Coll.gameObject.tag == ("LeftGoal"))
+        if ((Coll.gameObject.tag == ("LeftGoal")) && (_scoringEnabled))
         {
             CCScript.CameraJoltLeft();      // Triggers camera jolt 
             GCScript.PlayerTwoScored();     // Triggers Player Two scored Animation
@@ -114,7 +119,7 @@ public class Ball_Controller : MonoBehaviour
             StartCoroutine(Reset());
         }
 
-        if (Coll.gameObject.tag == ("RightGoal"))
+        if ((Coll.gameObject.tag == ("RightGoal")) && (_scoringEnabled))
         {
             CCScript.CameraJoltRight();     // Trigger camera jolt
             GCScript.PlayerOneScored();     // Triggers Player One scored Animation

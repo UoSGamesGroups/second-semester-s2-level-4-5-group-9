@@ -38,12 +38,20 @@ public class Game_Controller : MonoBehaviour {
 
     private int PlayerWhoWon;
 
+    // Bool holders for disabling scoring at the end of the match
+    public Ball_Controller scoringEnabled;
+    public BallFXScript scoringSfxEnabled;
+
     void Awake()
     {
         UpdateScoreBoard();
+        GameObject scoreEnabledObj = GameObject.FindGameObjectWithTag("Ball");
+        scoringEnabled = scoreEnabledObj.GetComponent<Ball_Controller>();
+        scoringSfxEnabled = scoreEnabledObj.GetComponent<BallFXScript>();
+
     }
-	
-	void Update ()
+
+    void Update ()
     {
         if ((timer <= 0) && (!gameFinished))
         {
@@ -111,16 +119,20 @@ public class Game_Controller : MonoBehaviour {
                 StartCoroutine(SuddenDeath());
                 break;
             case 1:
-                playerOneWinsText.SetActive(true);
-                endOfMatchCanvas.SetActive(true);
+                scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
+                scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
+                playerOneWinsText.SetActive(true);                  // Sets Player One Win text to true
+                endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player One Wins!");
-                EndOfMatchAnim.Play("EndOfMatchPanelAnim");
+                EndOfMatchAnim.Play("EndOfMatchPanelAnim");         // Starts the End of Match fade to black
                 break;
             case 2:
-                playerTwoWinsText.SetActive(true);
-                endOfMatchCanvas.SetActive(true);
+                scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
+                scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
+                playerTwoWinsText.SetActive(true);                  // Sets Player Two Win text to true
+                endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player Two Wins");
-                EndOfMatchAnim.Play("EndOfMatchPanelAnim");
+                EndOfMatchAnim.Play("EndOfMatchPanelAnim");         // Starts the End of Match fade to black
                 break;
         }
     }

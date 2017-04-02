@@ -10,6 +10,8 @@ public class BallFXScript : MonoBehaviour{
     public AudioClip splashSound;
     public AudioClip iceScrapeSound;
 
+    public bool _scoringSfxEnabled;
+
     [Header("Ice Smash SFX")]
     [Header("Picks random Pitch between these ranges")]
     [Tooltip("Adjusts lowest Pitch")]
@@ -42,6 +44,7 @@ public class BallFXScript : MonoBehaviour{
     void Awake()
     {
         source = GetComponent<AudioSource>();
+        _scoringSfxEnabled = true; 
     }
 
 
@@ -62,12 +65,12 @@ public class BallFXScript : MonoBehaviour{
             obj.transform.rotation = transform.rotation;
             obj.SetActive(true);
         }
-        if (Coll.gameObject.tag == ("LeftGoal"))
+        if (Coll.gameObject.tag == ("LeftGoal") && (_scoringSfxEnabled))
         {
             GoalSFX();
         }
 
-        if (Coll.gameObject.tag == ("RightGoal"))
+        if (Coll.gameObject.tag == ("RightGoal") && (_scoringSfxEnabled))
         {
             GoalSFX();
         }

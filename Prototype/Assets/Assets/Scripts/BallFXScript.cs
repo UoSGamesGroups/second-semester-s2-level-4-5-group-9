@@ -37,9 +37,12 @@ public class BallFXScript : MonoBehaviour{
     public float iceScrapeLowRange = .5f;
     [Tooltip("Adjusts highest Pitch")]
     public float iceScrapeHighRange = 1.0f;
-    [Space(5), Tooltip("How loud the sound is, relative to velocity")]
-    public float scrapeVelocityToVol = .2F;
+    [Space(5), Tooltip("How loud the sound is, relative to puck velocity")]
+    public float scrapeVelocityToVol = .1F;
 
+    [Header("Ice Smash Prefab")]
+    [Space(5), Tooltip("How large the Ice Smash is, relative to puck velocity")]
+    public float velocityToIceSize = .01f;
 
     void Awake()
     {
@@ -61,6 +64,8 @@ public class BallFXScript : MonoBehaviour{
             // Gets an IceSmash Object from the IceSmashPooler
             GameObject obj = IceSmashPooler.current.GetPooledObject();
             if (obj == null) return;
+            float iceSmashSize = Coll.relativeVelocity.magnitude * velocityToIceSize;
+            obj.transform.localScale += new Vector3(iceSmashSize, iceSmashSize, iceSmashSize);
             obj.transform.position = transform.position;
             obj.transform.rotation = transform.rotation;
             obj.SetActive(true);

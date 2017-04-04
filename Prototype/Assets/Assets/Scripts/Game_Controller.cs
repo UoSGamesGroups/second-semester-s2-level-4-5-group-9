@@ -42,6 +42,10 @@ public class Game_Controller : MonoBehaviour {
     public Ball_Controller scoringEnabled;
     public BallFXScript scoringSfxEnabled;
 
+    // Varibles for Total Wins Storer
+    private TotalWinsStorer TotalWins;
+    private GameObject TotalWinObj;
+
     void Awake()
     {
         UpdateScoreBoard();
@@ -49,6 +53,9 @@ public class Game_Controller : MonoBehaviour {
         scoringEnabled = scoreEnabledObj.GetComponent<Ball_Controller>();
         scoringSfxEnabled = scoreEnabledObj.GetComponent<BallFXScript>();
 
+        // Gets/sets compononents up for Total Wins Storer
+        TotalWinObj = GameObject.Find("TotalWinsStorer");
+        TotalWins = TotalWinObj.GetComponent<TotalWinsStorer>();
     }
 
     void Update ()
@@ -121,6 +128,7 @@ public class Game_Controller : MonoBehaviour {
             case 1:
                 scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
                 scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
+                TotalWins.playerOneWinTotal++;                      // Updates the TotalWinsStorer
                 playerOneWinsText.SetActive(true);                  // Sets Player One Win text to true
                 endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player One Wins!");
@@ -129,6 +137,7 @@ public class Game_Controller : MonoBehaviour {
             case 2:
                 scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
                 scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
+                TotalWins.playerTwoWinTotal++;                      // Updates the TotalWinsStorer
                 playerTwoWinsText.SetActive(true);                  // Sets Player Two Win text to true
                 endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player Two Wins");

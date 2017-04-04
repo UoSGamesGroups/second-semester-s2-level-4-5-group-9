@@ -13,6 +13,10 @@ public class Game_Controller : MonoBehaviour {
     public Text Player1ScoreTxt;
     public Text Player2ScoreTxt;
 
+    [Header("Stores players' Total Wins as strings")]
+    public Text playerOneWinTotalTxt;
+    public Text playerTwoWinTotalTxt;
+
     [Header("Stores time remaining as a string")]
     public Text MatchTimerTxt;
 
@@ -56,6 +60,8 @@ public class Game_Controller : MonoBehaviour {
         // Gets/sets compononents up for Total Wins Storer
         TotalWinObj = GameObject.Find("TotalWinsStorer");
         TotalWins = TotalWinObj.GetComponent<TotalWinsStorer>();
+        // Makes sure the Player Win total is up to date 
+        UpdateWinTotal();
     }
 
     void Update ()
@@ -129,6 +135,7 @@ public class Game_Controller : MonoBehaviour {
                 scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
                 scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
                 TotalWins.playerOneWinTotal++;                      // Updates the TotalWinsStorer
+                UpdateWinTotal();                                   // Updates WinTotal Text
                 playerOneWinsText.SetActive(true);                  // Sets Player One Win text to true
                 endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player One Wins!");
@@ -138,12 +145,19 @@ public class Game_Controller : MonoBehaviour {
                 scoringEnabled._scoringEnabled = false;             // Turns off the ability to score
                 scoringSfxEnabled._scoringSfxEnabled = false;       // Stops the score Sfx
                 TotalWins.playerTwoWinTotal++;                      // Updates the TotalWinsStorer
+                UpdateWinTotal();                                   // Updates WinTotal Text
                 playerTwoWinsText.SetActive(true);                  // Sets Player Two Win text to true
                 endOfMatchCanvas.SetActive(true);                   // Activates the end of match canvas
                 print("Player Two Wins");
                 EndOfMatchAnim.Play("EndOfMatchPanelAnim");         // Starts the End of Match fade to black
                 break;
         }
+    }
+
+    public void UpdateWinTotal()
+    {
+        playerOneWinTotalTxt.text = "Total\nWins\n" + TotalWins.playerOneWinTotal.ToString();
+        playerTwoWinTotalTxt.text = "Total\nWins\n" + TotalWins.playerTwoWinTotal.ToString();
     }
 
     IEnumerator SuddenDeath()

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TotalWinsStorer : MonoBehaviour {
+public class TotalWinsStorer : MonoBehaviour{
 
     [Header("Players' Total Wins")]
     public int playerOneWinTotal = 0;

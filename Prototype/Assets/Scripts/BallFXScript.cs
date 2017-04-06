@@ -9,6 +9,7 @@ public class BallFXScript : MonoBehaviour{
     public AudioClip iceSmashSound;
     public AudioClip splashSound;
     public AudioClip iceScrapeSound;
+    public AudioClip goalPostSound;
 
     public bool _scoringSfxEnabled;
 
@@ -28,6 +29,8 @@ public class BallFXScript : MonoBehaviour{
     [Tooltip("Adjusts highest Pitch")]
     public float splashPitchHighRange = 1.2f;
 
+    [Header("Adjusts Goal Post Hit Sfx Volume"), Range(0.01f, 1.0f)]
+    public float goalPostVol = 0.5f;
 
     //------------ Not triggering TODO ----------------------//
 
@@ -85,6 +88,14 @@ public class BallFXScript : MonoBehaviour{
             source.pitch = Random.Range(iceScrapeLowRange, iceScrapeHighRange);
             float hitVol = Coll.relativeVelocity.magnitude * scrapeVelocityToVol;
             source.PlayOneShot(iceScrapeSound, hitVol);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D Coll)
+    {
+        if (Coll.gameObject.tag == ("GoalPost"))
+        {
+            source.PlayOneShot(goalPostSound, goalPostVol);
         }
     }
 

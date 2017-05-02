@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4f24ff2df7d3df94698c21c1c2c8c767
-timeCreated: 1490742802
+timeCreated: 1493735256
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,25 +10,28 @@ TextureImporter:
     21300006: Reindeer_Spritesheet_3
     21300008: Reindeer_Spritesheet_4
     21300010: Reindeer_Spritesheet_5
-    21300012: Reindeer_Spritesheet_6
-    21300014: Reindeer_Spritesheet_7
-    21300016: Reindeer_Spritesheet_8
-    21300018: Reindeer_Spritesheet_9
-    21300020: Reindeer_Spritesheet_10
+    21300012: Reindeer_Spritesheet_5
+    21300014: Reindeer_Spritesheet_6
+    21300016: Reindeer_Spritesheet_7
+    21300018: Reindeer_Spritesheet_8
+    21300020: Reindeer_Spritesheet_9
     21300022: Reindeer_Spritesheet_11
-    21300024: Reindeer_Spritesheet_12
-    21300026: Reindeer_Spritesheet_13
-    21300028: Reindeer_Spritesheet_14
-    21300030: Reindeer_Spritesheet_15
-    21300032: Reindeer_Spritesheet_16
+    21300024: Reindeer_Spritesheet_10
+    21300026: Reindeer_Spritesheet_11
+    21300028: Reindeer_Spritesheet_12
+    21300030: Reindeer_Spritesheet_13
+    21300032: Reindeer_Spritesheet_14
     21300034: Reindeer_Spritesheet_17
-    21300036: Reindeer_Spritesheet_18
-    21300038: Reindeer_Spritesheet_19
-    21300040: Reindeer_Spritesheet_20
-    21300042: Reindeer_Spritesheet_21
-    21300044: Reindeer_Spritesheet_22
+    21300036: Reindeer_Spritesheet_15
+    21300038: Reindeer_Spritesheet_16
+    21300040: Reindeer_Spritesheet_17
+    21300042: Reindeer_Spritesheet_18
+    21300044: Reindeer_Spritesheet_19
     21300046: Reindeer_Spritesheet_23
-    21300048: Reindeer_Spritesheet_24
+    21300048: Reindeer_Spritesheet_20
+    21300050: Reindeer_Spritesheet_21
+    21300052: Reindeer_Spritesheet_22
+    21300054: Reindeer_Spritesheet_24
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -91,6 +94,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -103,7 +114,7 @@ TextureImporter:
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -116,7 +127,7 @@ TextureImporter:
         width: 304
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -129,7 +140,7 @@ TextureImporter:
         width: 306
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -142,7 +153,7 @@ TextureImporter:
         width: 306
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -155,7 +166,7 @@ TextureImporter:
         width: 306
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -163,12 +174,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1616
-        y: 1421
-        width: 302
+        x: 1
+        y: 1066
+        width: 306
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -176,12 +187,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1
+        x: 324
         y: 1066
-        width: 306
+        width: 304
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -189,12 +200,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 324
+        x: 647
         y: 1066
-        width: 304
+        width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -202,12 +213,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 647
+        x: 970
         y: 1066
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -215,12 +226,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 970
+        x: 1293
         y: 1066
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -228,12 +239,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 1066
-        width: 302
+        x: 1
+        y: 711
+        width: 303
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -241,12 +252,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 1616
-        y: 1066
-        width: 302
+        x: 324
+        y: 711
+        width: 306
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -254,12 +265,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 1
+        x: 647
         y: 711
-        width: 303
+        width: 305
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -267,12 +278,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 324
+        x: 970
         y: 711
-        width: 306
+        width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -280,12 +291,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 647
+        x: 1293
         y: 711
-        width: 305
+        width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -293,12 +304,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 970
-        y: 711
+        x: 1
+        y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -306,12 +317,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 711
+        x: 324
+        y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -319,12 +330,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 1616
-        y: 711
+        x: 647
+        y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -332,12 +343,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1
+        x: 970
         y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -345,12 +356,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 324
+        x: 1293
         y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -358,12 +369,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 647
-        y: 356
+        x: 1
+        y: 1
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -371,12 +382,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 970
-        y: 356
+        x: 1616
+        y: 1420
         width: 302
-        height: 353
+        height: 354
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -384,12 +395,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 356
+        x: 1616
+        y: 1065
         width: 302
-        height: 353
+        height: 354
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -398,11 +409,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1616
-        y: 356
+        y: 711
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -410,12 +421,12 @@ TextureImporter:
       name: Reindeer_Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
+        x: 1616
+        y: 356
         width: 302
         height: 353
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

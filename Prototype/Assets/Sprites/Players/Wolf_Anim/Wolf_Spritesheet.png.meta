@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 17c9fa96fd0ab354ea7307178f689804
-timeCreated: 1490742867
+timeCreated: 1493736101
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,26 +9,30 @@ TextureImporter:
     21300004: Wolf_Spritesheet_2
     21300006: Wolf_Spritesheet_3
     21300008: Wolf_Spritesheet_4
-    21300010: Wolf_Spritesheet_5
-    21300012: Wolf_Spritesheet_6
-    21300014: Wolf_Spritesheet_7
-    21300016: Wolf_Spritesheet_8
+    21300010: Wolf_Spritesheet_4
+    21300012: Wolf_Spritesheet_5
+    21300014: Wolf_Spritesheet_6
+    21300016: Wolf_Spritesheet_7
     21300018: Wolf_Spritesheet_9
-    21300020: Wolf_Spritesheet_10
-    21300022: Wolf_Spritesheet_11
-    21300024: Wolf_Spritesheet_12
-    21300026: Wolf_Spritesheet_13
+    21300020: Wolf_Spritesheet_8
+    21300022: Wolf_Spritesheet_9
+    21300024: Wolf_Spritesheet_10
+    21300026: Wolf_Spritesheet_11
     21300028: Wolf_Spritesheet_14
-    21300030: Wolf_Spritesheet_15
-    21300032: Wolf_Spritesheet_16
-    21300034: Wolf_Spritesheet_17
-    21300036: Wolf_Spritesheet_18
+    21300030: Wolf_Spritesheet_12
+    21300032: Wolf_Spritesheet_13
+    21300034: Wolf_Spritesheet_14
+    21300036: Wolf_Spritesheet_15
     21300038: Wolf_Spritesheet_19
-    21300040: Wolf_Spritesheet_20
-    21300042: Wolf_Spritesheet_21
-    21300044: Wolf_Spritesheet_22
-    21300046: Wolf_Spritesheet_23
+    21300040: Wolf_Spritesheet_16
+    21300042: Wolf_Spritesheet_17
+    21300044: Wolf_Spritesheet_18
+    21300046: Wolf_Spritesheet_19
     21300048: Wolf_Spritesheet_24
+    21300050: Wolf_Spritesheet_20
+    21300052: Wolf_Spritesheet_21
+    21300054: Wolf_Spritesheet_22
+    21300056: Wolf_Spritesheet_23
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -91,6 +95,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -103,7 +115,7 @@ TextureImporter:
         width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -116,7 +128,7 @@ TextureImporter:
         width: 437
         height: 296
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -129,7 +141,7 @@ TextureImporter:
         width: 438
         height: 302
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -142,7 +154,7 @@ TextureImporter:
         width: 437
         height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -150,12 +162,12 @@ TextureImporter:
       name: Wolf_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 1432
+        x: 7
+        y: 1076
         width: 436
-        height: 291
+        height: 313
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -163,12 +175,12 @@ TextureImporter:
       name: Wolf_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1076
-        width: 436
-        height: 313
+        x: 454
+        y: 1078
+        width: 437
+        height: 318
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -176,12 +188,12 @@ TextureImporter:
       name: Wolf_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 456
+        x: 905
         y: 1076
-        width: 437
-        height: 318
+        width: 438
+        height: 323
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -189,12 +201,12 @@ TextureImporter:
       name: Wolf_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 905
+        x: 1356
         y: 1076
-        width: 438
-        height: 323
+        width: 437
+        height: 329
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -202,12 +214,12 @@ TextureImporter:
       name: Wolf_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 1076
-        width: 437
-        height: 329
+        x: 7
+        y: 720
+        width: 436
+        height: 335
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -215,12 +227,12 @@ TextureImporter:
       name: Wolf_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 1076
-        width: 436
-        height: 291
+        x: 456
+        y: 720
+        width: 437
+        height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -228,12 +240,12 @@ TextureImporter:
       name: Wolf_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 7
+        x: 905
         y: 720
-        width: 436
-        height: 335
+        width: 438
+        height: 318
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -241,12 +253,12 @@ TextureImporter:
       name: Wolf_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 456
+        x: 1356
         y: 720
         width: 437
-        height: 340
+        height: 296
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -254,12 +266,12 @@ TextureImporter:
       name: Wolf_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 905
-        y: 720
-        width: 438
-        height: 318
+        x: 3
+        y: 364
+        width: 436
+        height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -267,12 +279,12 @@ TextureImporter:
       name: Wolf_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 720
+        x: 456
+        y: 364
         width: 437
-        height: 296
+        height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -280,12 +292,12 @@ TextureImporter:
       name: Wolf_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 720
-        width: 436
+        x: 905
+        y: 364
+        width: 438
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -293,12 +305,12 @@ TextureImporter:
       name: Wolf_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 7
+        x: 1356
         y: 364
-        width: 436
+        width: 437
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -306,12 +318,12 @@ TextureImporter:
       name: Wolf_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 456
-        y: 364
-        width: 437
+        x: 7
+        y: 8
+        width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -319,12 +331,12 @@ TextureImporter:
       name: Wolf_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 905
-        y: 364
-        width: 438
+        x: 456
+        y: 8
+        width: 437
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -332,12 +344,12 @@ TextureImporter:
       name: Wolf_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 364
-        width: 437
+        x: 905
+        y: 8
+        width: 438
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -345,12 +357,12 @@ TextureImporter:
       name: Wolf_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 364
-        width: 436
+        x: 1356
+        y: 8
+        width: 437
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -358,12 +370,12 @@ TextureImporter:
       name: Wolf_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 7
-        y: 8
+        x: 1807
+        y: 1432
         width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -371,12 +383,12 @@ TextureImporter:
       name: Wolf_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 456
-        y: 8
-        width: 437
+        x: 1807
+        y: 1076
+        width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -384,12 +396,12 @@ TextureImporter:
       name: Wolf_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 905
-        y: 8
-        width: 438
+        x: 1807
+        y: 720
+        width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -397,12 +409,12 @@ TextureImporter:
       name: Wolf_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 8
-        width: 437
-        height: 291
+        x: 1807
+        y: 364
+        width: 436
+        height: 289
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -415,7 +427,7 @@ TextureImporter:
         width: 436
         height: 291
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

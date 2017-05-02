@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 67f0f081f6411f2489bb00893d8efbd4
-timeCreated: 1490742675
+timeCreated: 1493735638
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,25 +10,28 @@ TextureImporter:
     21300006: Polar_Spritesheet_3
     21300008: Polar_Spritesheet_4
     21300010: Polar_Spritesheet_5
-    21300012: Polar_Spritesheet_6
-    21300014: Polar_Spritesheet_7
-    21300016: Polar_Spritesheet_8
-    21300018: Polar_Spritesheet_9
-    21300020: Polar_Spritesheet_10
+    21300012: Polar_Spritesheet_5
+    21300014: Polar_Spritesheet_6
+    21300016: Polar_Spritesheet_7
+    21300018: Polar_Spritesheet_8
+    21300020: Polar_Spritesheet_9
     21300022: Polar_Spritesheet_11
-    21300024: Polar_Spritesheet_12
-    21300026: Polar_Spritesheet_13
-    21300028: Polar_Spritesheet_14
-    21300030: Polar_Spritesheet_15
-    21300032: Polar_Spritesheet_16
+    21300024: Polar_Spritesheet_10
+    21300026: Polar_Spritesheet_11
+    21300028: Polar_Spritesheet_12
+    21300030: Polar_Spritesheet_13
+    21300032: Polar_Spritesheet_14
     21300034: Polar_Spritesheet_17
-    21300036: Polar_Spritesheet_18
-    21300038: Polar_Spritesheet_19
-    21300040: Polar_Spritesheet_20
-    21300042: Polar_Spritesheet_21
-    21300044: Polar_Spritesheet_22
+    21300036: Polar_Spritesheet_15
+    21300038: Polar_Spritesheet_16
+    21300040: Polar_Spritesheet_17
+    21300042: Polar_Spritesheet_18
+    21300044: Polar_Spritesheet_19
     21300046: Polar_Spritesheet_23
     21300048: Polar_Spritesheet_24
+    21300050: Polar_Spritesheet_20
+    21300052: Polar_Spritesheet_21
+    21300054: Polar_Spritesheet_22
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -91,6 +94,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -103,7 +114,7 @@ TextureImporter:
         width: 392
         height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -116,7 +127,7 @@ TextureImporter:
         width: 391
         height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -129,7 +140,7 @@ TextureImporter:
         width: 392
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -142,7 +153,7 @@ TextureImporter:
         width: 392
         height: 367
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -155,7 +166,7 @@ TextureImporter:
         width: 391
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -163,12 +174,12 @@ TextureImporter:
       name: Polar_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1998
-        y: 1752
+        x: 4
+        y: 1315
         width: 392
-        height: 361
+        height: 375
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -176,12 +187,12 @@ TextureImporter:
       name: Polar_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4
+        x: 403
         y: 1315
-        width: 392
-        height: 375
+        width: 391
+        height: 377
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -189,12 +200,12 @@ TextureImporter:
       name: Polar_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 403
+        x: 801
         y: 1315
-        width: 391
-        height: 377
+        width: 392
+        height: 382
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -202,12 +213,12 @@ TextureImporter:
       name: Polar_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 801
+        x: 1201
         y: 1315
         width: 392
-        height: 382
+        height: 385
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -215,12 +226,12 @@ TextureImporter:
       name: Polar_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1201
+        x: 1600
         y: 1315
-        width: 392
-        height: 385
+        width: 391
+        height: 389
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -228,12 +239,12 @@ TextureImporter:
       name: Polar_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 1315
-        width: 391
-        height: 389
+        x: 4
+        y: 877
+        width: 392
+        height: 376
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -241,12 +252,12 @@ TextureImporter:
       name: Polar_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 1998
-        y: 1315
-        width: 392
-        height: 361
+        x: 403
+        y: 877
+        width: 391
+        height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -254,12 +265,12 @@ TextureImporter:
       name: Polar_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 4
+        x: 804
         y: 877
         width: 392
-        height: 376
+        height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -267,12 +278,12 @@ TextureImporter:
       name: Polar_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 403
+        x: 1201
         y: 877
-        width: 391
+        width: 392
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -280,12 +291,12 @@ TextureImporter:
       name: Polar_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 801
+        x: 1600
         y: 877
-        width: 392
+        width: 391
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -293,12 +304,12 @@ TextureImporter:
       name: Polar_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 877
+        x: 4
+        y: 440
         width: 392
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -306,12 +317,12 @@ TextureImporter:
       name: Polar_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 877
+        x: 403
+        y: 440
         width: 391
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -319,12 +330,12 @@ TextureImporter:
       name: Polar_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 1998
-        y: 877
+        x: 801
+        y: 440
         width: 392
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -332,12 +343,12 @@ TextureImporter:
       name: Polar_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 4
+        x: 1201
         y: 440
         width: 392
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -345,12 +356,12 @@ TextureImporter:
       name: Polar_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 403
-        y: 440
+        x: 1600
+        y: 437
         width: 391
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -358,12 +369,12 @@ TextureImporter:
       name: Polar_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 801
-        y: 440
-        width: 392
-        height: 363
+        x: 1998
+        y: 1752
+        width: 390
+        height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -371,12 +382,12 @@ TextureImporter:
       name: Polar_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 440
-        width: 392
-        height: 363
+        x: 1999
+        y: 1315
+        width: 391
+        height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -384,12 +395,12 @@ TextureImporter:
       name: Polar_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 440
-        width: 391
+        x: 1999
+        y: 877
+        width: 389
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -397,12 +408,12 @@ TextureImporter:
       name: Polar_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 1998
+        x: 2001
         y: 440
-        width: 392
+        width: 381
         height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -415,7 +426,7 @@ TextureImporter:
         width: 392
         height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

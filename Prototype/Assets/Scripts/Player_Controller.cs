@@ -13,6 +13,7 @@ public class Player_Controller : MonoBehaviour
     public KeyCode DownKey;
     public KeyCode RightKey;
     public KeyCode LeftKey;
+    public KeyCode SpeedKey;
 
     [Header("Movement")]
     public float Speed = 7f;
@@ -29,11 +30,13 @@ public class Player_Controller : MonoBehaviour
     public int ThrowCharge = 0;
     private ThrowDirection ThrowDir = ThrowDirection.Straight;
     private bool BallCaught = false;
+    private bool SpeedUsed = false;
     private GameObject HeldBall;
     
     [Header("Player Selection")]
     private GameObject Game_Controller;
     private ValueStorer GameC_Script;
+    public Animator PlayerAnims;
 
     public Sprite Penguin;
     public Sprite PolarBear;
@@ -82,6 +85,9 @@ public class Player_Controller : MonoBehaviour
         else
             MoveY = 0;
 
+        if ((Input.GetKey(SpeedKey)) && !SpeedUsed)
+            StartCoroutine(SpeedUp());
+
         if ((Input.GetKeyUp(UpKey)) || (Input.GetKeyUp(DownKey)))
 		{
             ThrowDir = ThrowDirection.Straight;
@@ -95,10 +101,7 @@ public class Player_Controller : MonoBehaviour
 
             if (Input.GetKeyUp(CatchKey))
             {
-                HeldBall.SetActive(true);
-                HeldBall.GetComponent<Ball_Controller>().Throw(Player, ThrowCharge - 1, transform.position, ThrowDir);
-                HeldBall = null;
-                BallCaught = false;
+                StartCoroutine(ThrowAnim());
             }
 
             if (Input.GetKeyDown(UpKey))
@@ -132,18 +135,21 @@ public class Player_Controller : MonoBehaviour
                     ThisSprite.sprite = PolarBear;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Polar", true);
                     transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 2:
                     ThisSprite.sprite = Reindeer;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Reindeer", true);
                     transform.localScale = new Vector3(0.6f, 0.6f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Wolf", true);
                     transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
             }
@@ -163,18 +169,21 @@ public class Player_Controller : MonoBehaviour
                     ThisSprite.sprite = PolarBear;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Polar", true);
                     transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
                 case 2:
                     ThisSprite.sprite = Reindeer;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Reindeer", true);
                     transform.localScale = new Vector3(0.6f, 0.6f, 0);
                     break;
                 case 3:
                     ThisSprite.sprite = Wolf;
                     Destroy(GetComponent<PolygonCollider2D>());
                     gameObject.AddComponent<PolygonCollider2D>();
+                    PlayerAnims.SetBool("Wolf", true);
                     transform.localScale = new Vector3(0.4f, 0.4f, 0);
                     break;
             }
@@ -196,6 +205,18 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
+    IEnumerator ThrowAnim()
+    {
+        PlayerAnims.SetBool("Throw", true);
+        yield return new WaitForSeconds(0.25f);
+        HeldBall.SetActive(true);
+        HeldBall.GetComponent<Ball_Controller>().Throw(Player, ThrowCharge - 1, transform.position, ThrowDir);
+        HeldBall = null;
+        BallCaught = false;
+        yield return new WaitForSeconds(0.75f);
+        PlayerAnims.SetBool("Throw", false);
+    }
+
     IEnumerator Timer()
     {
         while (ThrowCharge < 4)
@@ -203,5 +224,20 @@ public class Player_Controller : MonoBehaviour
             ThrowCharge++;
             yield return new WaitForSeconds(0.45f);
         }
+    }
+
+    IEnumerator SpeedUp()
+    {
+        Speed = 15;
+        StartCoroutine(SpeedCD());
+        yield return new WaitForSeconds(0.2f);
+        Speed = 7;
+    }
+
+    IEnumerator SpeedCD()
+    {
+        SpeedUsed = true;
+        yield return new WaitForSeconds(5.0f);
+        SpeedUsed = false;
     }
 }

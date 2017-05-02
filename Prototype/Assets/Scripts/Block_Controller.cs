@@ -9,16 +9,18 @@ public class Block_Controller : MonoBehaviour {
     public bool BlockActivated = false;
     private float Visable = 0.3f;
     private bool CanBlock = true;
-    public GameObject BlockAsset;
+    public CircleCollider2D PC;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
+    public GameObject BlockObject;
 
     void Start ()
     {
         Player_Controller = this.gameObject;
         Player_Script = Player_Controller.GetComponent<Player_Controller>();
-        BlockAsset.SetActive(false);
-	}
+        PC.GetComponent<CircleCollider2D>().enabled = false;
+        BlockObject.GetComponent<Animation>()["BlockAnim"].wrapMode = WrapMode.Once;
+    }
 
 
     void Update()
@@ -67,11 +69,12 @@ public class Block_Controller : MonoBehaviour {
 
     IEnumerator BlockActive ()
     {
-        BlockAsset.SetActive(true);
+        PC.GetComponent<CircleCollider2D>().enabled = true;
         BlockActivated = true;
+        BlockObject.GetComponent<Animation>().Play("BlockAnim");
         yield return new WaitForSeconds(Visable);
         BlockActivated = false;
-        BlockAsset.SetActive(false);
+        PC.GetComponent<CircleCollider2D>().enabled = false;
         BlockCD = false;
     }
 }

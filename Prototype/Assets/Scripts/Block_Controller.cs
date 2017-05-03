@@ -6,20 +6,20 @@ public class Block_Controller : MonoBehaviour {
 
     bool BlockCD = true;
     private int Cooldown = 10;
-    public bool BlockActivated = false;
-    private float Visable = 0.3f;
+    private float Visable = 1.0f;
     private bool CanBlock = true;
-    public CircleCollider2D PC;
+    public CapsuleCollider2D PC;
     private GameObject Player_Controller;
     private Player_Controller Player_Script;
-    public GameObject BlockObject;
+    public Animator Blockanimm;
+    public GameObject BlockObj;
 
     void Start ()
     {
         Player_Controller = this.gameObject;
         Player_Script = Player_Controller.GetComponent<Player_Controller>();
-        PC.GetComponent<CircleCollider2D>().enabled = false;
-        BlockObject.GetComponent<Animation>()["BlockAnim"].wrapMode = WrapMode.Once;
+        PC.GetComponent<CapsuleCollider2D>().enabled = false;
+        BlockObj.GetComponent<SpriteRenderer>().enabled = false;
     }
 
 
@@ -69,12 +69,14 @@ public class Block_Controller : MonoBehaviour {
 
     IEnumerator BlockActive ()
     {
-        PC.GetComponent<CircleCollider2D>().enabled = true;
-        BlockActivated = true;
-        BlockObject.GetComponent<Animation>().Play("BlockAnim");
-        yield return new WaitForSeconds(Visable);
-        BlockActivated = false;
-        PC.GetComponent<CircleCollider2D>().enabled = false;
+        BlockObj.GetComponent<SpriteRenderer>().enabled = true;
+        Blockanimm.SetBool("Block", true);
+        yield return new WaitForSeconds(0.3f);
+        PC.GetComponent<CapsuleCollider2D>().enabled = true;
+        yield return new WaitForSeconds(0.7f);
+        Blockanimm.SetBool("Block", false);
+        PC.GetComponent<CapsuleCollider2D>().enabled = false;
+        BlockObj.GetComponent<SpriteRenderer>().enabled = false;
         BlockCD = false;
     }
 }
